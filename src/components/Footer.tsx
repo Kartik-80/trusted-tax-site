@@ -33,38 +33,50 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white relative overflow-hidden">
+      {/* Animated Wave Background */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden">
+        <svg
+          className="relative block w-full h-20"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            fill="rgb(249 250 251)"
+            className="dark:fill-gray-800 animate-wave"
+          ></path>
+        </svg>
+      </div>
+
+      <div className="container mx-auto px-4 py-16 relative z-10 mt-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="animate-fade-in">
             <h3 className="text-2xl font-bold mb-6">KARTIK TAX LAB & CO.</h3>
-            <p className="text-gray-300 mb-6">
-              Professional tax and accounting solutions for businesses and individuals. 
-              Trusted by clients across Meerut and beyond.
-            </p>
-            <div className="flex space-x-4">
-              <Button size="sm" variant="outline" className="border-gray-600 text-white">
-                <Facebook className="w-4 h-4" />
+            <div className="flex space-x-4 mb-6">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full">
+                <Facebook className="w-5 h-5" />
               </Button>
-              <Button size="sm" variant="outline" className="border-gray-600 text-white">
-                <Linkedin className="w-4 h-4" />
+              <Button size="sm" className="bg-blue-700 hover:bg-blue-800 p-3 rounded-full">
+                <Linkedin className="w-5 h-5" />
               </Button>
-              <Button size="sm" variant="outline" className="border-gray-600 text-white">
-                <Instagram className="w-4 h-4" />
+              <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-3 rounded-full">
+                <Instagram className="w-5 h-5" />
               </Button>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-300 hover:text-white transition-colors text-left"
+                    className="text-gray-300 hover:text-white transition-colors text-left hover:translate-x-2 transform duration-300"
                   >
                     {link.name}
                   </button>
@@ -74,7 +86,7 @@ export const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -86,15 +98,15 @@ export const Footer = () => {
           </div>
 
           {/* Contact & Newsletter */}
-          <div>
+          <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
             <h4 className="text-lg font-semibold mb-6">Stay Connected</h4>
             <div className="space-y-4 mb-6">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-blue-400" />
+              <div className="flex items-center space-x-3 group">
+                <Phone className="w-4 h-4 text-blue-400 group-hover:animate-bounce" />
                 <span className="text-gray-300">+91 6397474575</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-blue-400" />
+              <div className="flex items-center space-x-3 group">
+                <Mail className="w-4 h-4 text-blue-400 group-hover:animate-bounce" />
                 <span className="text-gray-300">adv.kartik7@gmail.com</span>
               </div>
             </div>
@@ -109,7 +121,7 @@ export const Footer = () => {
                   placeholder="Your email"
                   className="bg-gray-800 border-gray-700 text-white"
                 />
-                <Button type="submit" size="sm" className="bg-blue-600 hover:bg-blue-700">
+                <Button type="submit" size="sm" className="bg-blue-600 hover:bg-blue-700 animate-pulse">
                   Subscribe
                 </Button>
               </form>
@@ -117,7 +129,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in" style={{animationDelay: '0.4s'}}>
           <p className="text-gray-300">
             © 2024 Kartik Tax Lab & Co. All rights reserved.
           </p>

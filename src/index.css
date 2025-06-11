@@ -96,7 +96,7 @@
   }
 }
 
-/* Custom animations inspired by devndez.com */
+/* Enhanced animations inspired by devndez.com */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -130,6 +130,53 @@
   }
 }
 
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 .animate-fade-in {
   animation: fade-in 0.8s ease-out forwards;
   opacity: 0;
@@ -145,6 +192,28 @@
   opacity: 0;
 }
 
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3s ease-in-out infinite 1.5s;
+}
+
+.animate-wave {
+  animation: wave 10s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -158,4 +227,33 @@ html {
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive elements */
+.story-link {
+  position: relative;
+  display: inline-block;
+}
+
+.story-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(var(--primary));
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.story-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Dark mode transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
