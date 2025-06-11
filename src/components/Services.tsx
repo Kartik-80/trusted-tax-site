@@ -22,8 +22,8 @@ export const Services = () => {
     },
     {
       icon: TrendingUp,
-      title: "Financial Consulting",
-      description: "Strategic financial advice and consulting to help your business grow and optimize operations.",
+      title: "Coming Soon",
+      description: "We're expanding our services to bring you even more comprehensive business solutions.",
     },
     {
       icon: Shield,
@@ -36,6 +36,13 @@ export const Services = () => {
       description: "Continuous support and maintenance for all your tax and accounting needs throughout the year.",
     },
   ];
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section id="services" className="py-20 bg-gray-50">
@@ -51,7 +58,7 @@ export const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-blue-600" />
@@ -66,8 +73,12 @@ export const Services = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-            View All Services
+          <Button 
+            size="lg" 
+            className="bg-blue-600 hover:bg-blue-700"
+            onClick={scrollToContact}
+          >
+            Contact Us
           </Button>
         </div>
       </div>

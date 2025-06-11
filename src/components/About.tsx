@@ -12,6 +12,13 @@ export const About = () => {
     "100% Confidential",
   ];
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -23,7 +30,7 @@ export const About = () => {
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               At Kartik Tax Lab & Co., we are committed to providing exceptional tax and accounting services 
-              that help our clients achieve financial success. With over 8 years of experience, we understand 
+              that help our clients achieve financial success. With over 2 years of experience, we understand 
               the complexities of tax regulations and provide personalized solutions for every client.
             </p>
             
@@ -37,10 +44,18 @@ export const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700"
+                onClick={() => scrollToSection('services')}
+              >
                 Learn More
               </Button>
-              <Button size="lg" variant="outline">
+              <Button 
+                size="lg" 
+                variant="outline"
+                onClick={() => scrollToSection('contact')}
+              >
                 Contact Us
               </Button>
             </div>
@@ -51,7 +66,7 @@ export const About = () => {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-4">Professional Tax Services</h3>
               <p className="text-gray-600">
-                Comprehensive tax planning, GST filing, business registration, and financial consulting 
+                Comprehensive tax planning, GST filing, business registration, and consulting 
                 services for individuals, startups, and small businesses.
               </p>
             </div>

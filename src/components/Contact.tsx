@@ -72,7 +72,7 @@ export const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">+91 9876543210</p>
+                <p className="text-gray-600">+91 6397474575</p>
               </CardContent>
             </Card>
 
@@ -97,8 +97,8 @@ export const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Mon - Sat: 9:00 AM - 6:00 PM<br />
-                  Sunday: Closed
+                  Mon - Fri: 10:00 AM - 6:00 PM<br />
+                  Sat - Sun: Closed
                 </p>
               </CardContent>
             </Card>
