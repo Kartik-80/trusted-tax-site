@@ -38,7 +38,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-blue-600"
               onClick={() => scrollToSection('services')}
             >
               Our Services
@@ -46,7 +46,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-white text-white"
               onClick={() => scrollToSection('contact')}
             >
               Get Consultation

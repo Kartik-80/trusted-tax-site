@@ -15,9 +15,9 @@ export const Footer = () => {
     "Tax Planning",
     "GST Services", 
     "Business Registration",
-    "Coming Soon",
     "Audit Services",
     "Ongoing Support",
+    "Coming Soon",
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -44,13 +44,13 @@ export const Footer = () => {
               Trusted by clients across Meerut and beyond.
             </p>
             <div className="flex space-x-4">
-              <Button size="sm" variant="outline" className="border-gray-600 text-white hover:bg-white hover:text-gray-900">
+              <Button size="sm" variant="outline" className="border-gray-600 text-white">
                 <Facebook className="w-4 h-4" />
               </Button>
-              <Button size="sm" variant="outline" className="border-gray-600 text-white hover:bg-white hover:text-gray-900">
+              <Button size="sm" variant="outline" className="border-gray-600 text-white">
                 <Linkedin className="w-4 h-4" />
               </Button>
-              <Button size="sm" variant="outline" className="border-gray-600 text-white hover:bg-white hover:text-gray-900">
+              <Button size="sm" variant="outline" className="border-gray-600 text-white">
                 <Instagram className="w-4 h-4" />
               </Button>
             </div>
@@ -119,8 +119,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Kartik Tax Lab & Co. All rights reserved. | 
-            <span className="text-blue-400"> Trusted Tax & Accounting Solutions</span>
+            © 2024 Kartik Tax Lab & Co. All rights reserved.
           </p>
         </div>
       </div>

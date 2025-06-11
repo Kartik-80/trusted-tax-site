@@ -1,5 +1,5 @@
 
-import { Calculator, FileText, Users, TrendingUp, Shield, Clock } from "lucide-react";
+import { Calculator, FileText, Users, Shield, Clock, TrendingUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -21,11 +21,6 @@ export const Services = () => {
       description: "Company incorporation, partnership registration, and all legal business setup requirements.",
     },
     {
-      icon: TrendingUp,
-      title: "Coming Soon",
-      description: "We're expanding our services to bring you even more comprehensive business solutions.",
-    },
-    {
       icon: Shield,
       title: "Audit & Assurance",
       description: "Professional audit services and assurance to ensure compliance and financial accuracy.",
@@ -34,6 +29,11 @@ export const Services = () => {
       icon: Clock,
       title: "Ongoing Support",
       description: "Continuous support and maintenance for all your tax and accounting needs throughout the year.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Coming Soon",
+      description: "We're expanding our services to bring you even more comprehensive business solutions.",
     },
   ];
 
