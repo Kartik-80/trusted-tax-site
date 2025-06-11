@@ -35,13 +35,20 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-white relative overflow-hidden">
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800&fit=crop" 
+          alt="Office background" 
+          className="w-full h-full object-cover opacity-5"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-fade-in">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.1s'}}>
             Let's discuss how we can help you with your tax and accounting needs. 
             Contact us today for a free consultation.
           </p>
@@ -49,8 +56,8 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Information */}
-          <div className="space-y-6">
-            <Card>
+          <div className="space-y-6 animate-fade-in" style={{animationDelay: '0.2s'}}>
+            <Card className="transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-blue-600" />
@@ -64,7 +71,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
@@ -76,7 +83,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-blue-600" />
@@ -88,7 +95,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Clock className="w-5 h-5 text-blue-600" />
@@ -105,8 +112,8 @@ export const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card>
+          <div className="lg:col-span-2 animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <Card className="transform transition-all duration-300 hover:shadow-lg">
               <CardHeader>
                 <CardTitle>Send us a message</CardTitle>
               </CardHeader>
@@ -124,6 +131,7 @@ export const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="Your full name"
+                        className="transition-all duration-300 focus:scale-105"
                       />
                     </div>
                     <div>
@@ -138,6 +146,7 @@ export const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="your.email@example.com"
+                        className="transition-all duration-300 focus:scale-105"
                       />
                     </div>
                   </div>
@@ -152,6 +161,7 @@ export const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 XXXXX XXXXX"
+                      className="transition-all duration-300 focus:scale-105"
                     />
                   </div>
 
@@ -167,10 +177,15 @@ export const Contact = () => {
                       required
                       rows={6}
                       placeholder="Tell us about your tax and accounting needs..."
+                      className="transition-all duration-300 focus:scale-105"
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-blue-600 hover:bg-blue-700 transform transition-all duration-300 hover:scale-105"
+                  >
                     Send Message
                   </Button>
                 </form>

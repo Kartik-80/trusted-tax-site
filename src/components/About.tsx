@@ -20,10 +20,10 @@ export const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="animate-fade-in">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               We Provide Best
               <span className="text-blue-600"> Tax Solutions</span>
@@ -36,17 +36,21 @@ export const About = () => {
             
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div 
+                  key={index} 
+                  className="flex items-center space-x-3 animate-fade-in"
+                  style={{animationDelay: `${0.1 * index}s`}}
+                >
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: '0.6s'}}>
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700"
+                className="bg-blue-600 hover:bg-blue-700 transform transition-all duration-300 hover:scale-105"
                 onClick={() => scrollToSection('services')}
               >
                 Learn More
@@ -54,6 +58,7 @@ export const About = () => {
               <Button 
                 size="lg" 
                 variant="outline"
+                className="transform transition-all duration-300 hover:scale-105"
                 onClick={() => scrollToSection('contact')}
               >
                 Contact Us
@@ -61,14 +66,22 @@ export const About = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="bg-blue-100 rounded-2xl p-8 text-center">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-semibold mb-4">Professional Tax Services</h3>
-              <p className="text-gray-600">
-                Comprehensive tax planning, GST filing, business registration, and consulting 
-                services for individuals, startups, and small businesses.
-              </p>
+          <div className="relative animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop" 
+                alt="Professional workspace" 
+                className="rounded-2xl shadow-2xl transform transition-transform duration-700 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
+              <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm rounded-xl p-6 transform transition-transform duration-500 hover:scale-105">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-semibold mb-4">Professional Tax Services</h3>
+                <p className="text-gray-600">
+                  Comprehensive tax planning, GST filing, business registration, and consulting 
+                  services for individuals, startups, and small businesses.
+                </p>
+              </div>
             </div>
           </div>
         </div>
