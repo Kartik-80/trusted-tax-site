@@ -25,21 +25,14 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-1/3 h-full opacity-5">
-        <img 
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=800&fit=crop" 
-          alt="Background pattern" 
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <section className="py-20 bg-gray-100 dark:bg-gray-800 relative overflow-hidden transition-colors duration-200">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-fade-in">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in transition-colors duration-200">
             Hear From Our
-            <span className="text-blue-600"> Clients</span>
+            <span className="text-blue-600 dark:text-blue-400"> Clients</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.1s'}}>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animate-fade-in transition-colors duration-200" style={{animationDelay: '0.1s'}}>
             Don't just take our word for it. Here's what our satisfied clients have to say about our services.
           </p>
         </div>
@@ -48,7 +41,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl p-6 shadow-lg transform transition-all duration-500 hover:shadow-xl hover:-translate-y-2 animate-fade-in"
+              className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg transform transition-all duration-200 hover:shadow-xl hover:-translate-y-2 animate-fade-in border dark:border-gray-600"
               style={{animationDelay: `${0.1 * index}s`}}
             >
               <div className="flex mb-4">
@@ -56,16 +49,16 @@ export const Testimonials = () => {
                   <span key={i} className="text-yellow-400 text-xl">⭐</span>
                 ))}
               </div>
-              <p className="text-gray-600 mb-6 italic">"{testimonial.comment}"</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 italic transition-colors duration-200">"{testimonial.comment}"</p>
               <div className="flex items-center space-x-4">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-blue-100"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-blue-100 dark:border-gray-500"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-blue-600 text-sm">{testimonial.position}</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white transition-colors duration-200">{testimonial.name}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 text-sm transition-colors duration-200">{testimonial.position}</p>
                 </div>
               </div>
             </div>
