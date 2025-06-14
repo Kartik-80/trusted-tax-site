@@ -33,7 +33,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="animate-fade-in">
             <img 
-              src="/lovable-uploads/13636542-1a30-43a3-969a-a07fbb552078.png" 
+              src="/lovable-uploads/2ce5036f-5075-456b-bc82-3806a283d0ea.png" 
               alt="Kartik Tax Lab" 
               className="h-12 w-auto"
             />
