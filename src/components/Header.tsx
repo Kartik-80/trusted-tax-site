@@ -22,8 +22,19 @@ export const Header = () => {
     <header className="bg-white dark:bg-black shadow-sm sticky top-0 z-50 transition-all duration-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Navigation Links */}
-          <nav className="flex items-center space-x-8">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/2ce5036f-5075-456b-bc82-3806a283d0ea.png" 
+                alt="Kartik Tax Lab" 
+                className="h-12 w-auto"
+              />
+            </Link>
+          </div>
+
+          {/* Centered Navigation Links */}
+          <nav className="flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link
               to="/"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 font-medium"
