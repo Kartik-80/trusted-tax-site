@@ -31,8 +31,12 @@ export const Header = () => {
     <header className="bg-white dark:bg-black shadow-sm sticky top-0 z-50 transition-all duration-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 animate-fade-in">
-            KARTIK TAX LAB & CO.
+          <div className="animate-fade-in">
+            <img 
+              src="/lovable-uploads/acc762ea-20a0-4036-91ce-726414be109e.png" 
+              alt="Kartik Tax Lab" 
+              className="h-12 w-auto"
+            />
           </div>
           
           {/* Desktop Navigation */}
@@ -99,4 +103,3 @@ export const Header = () => {
     </header>
   );
 };
-
