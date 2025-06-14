@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -61,7 +60,7 @@ export const Hero = () => {
             </div>
 
             <div className="cursor-pointer animate-fade-in" style={{animationDelay: '0.6s'}} onClick={() => scrollToSection('services')}>
-              <ArrowDown className="w-6 h-6 mx-auto lg:mx-0 animate-bounce" />
+              <ArrowDown className="w-6 h-6 mx-auto animate-bounce" />
             </div>
           </div>
 
@@ -81,4 +80,3 @@ export const Hero = () => {
     </section>
   );
 };
-
