@@ -34,7 +34,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="animate-fade-in">
-            <img src="/lovable-uploads/13636542-1a30-43a3-969a-a07fbb552078.png" alt="Kartik Tax Lab" className="h-12 w-auto object-fill" />
+            <img src="/lovable-uploads/13636542-1a30-43a3-969a-a07fbb552078.png" alt="Kartik Tax Lab" className="h-12 w-auto object-none" />
           </div>
           
           {/* Desktop Navigation */}
