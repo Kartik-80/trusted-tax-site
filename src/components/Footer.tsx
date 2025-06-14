@@ -34,10 +34,10 @@ export const Footer = () => {
 
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white relative overflow-hidden">
-      {/* Animated Wave Background */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden">
+      {/* Smooth Wave Animation */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg
-          className="relative block w-full h-20"
+          className="relative block w-full h-16"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
@@ -45,24 +45,24 @@ export const Footer = () => {
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
             fill="rgb(249 250 251)"
-            className="dark:fill-gray-800 animate-wave"
+            className="dark:fill-gray-800 animate-smooth-wave"
           ></path>
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 py-16 relative z-10 mt-12">
+      <div className="container mx-auto px-4 py-16 relative z-10 mt-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="animate-fade-in">
             <h3 className="text-2xl font-bold mb-6">KARTIK TAX LAB & CO.</h3>
             <div className="flex space-x-4 mb-6">
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-all duration-300 hover:scale-110">
                 <Facebook className="w-5 h-5" />
               </Button>
-              <Button size="sm" className="bg-blue-700 hover:bg-blue-800 p-3 rounded-full">
+              <Button size="sm" className="bg-blue-700 hover:bg-blue-800 p-3 rounded-full transition-all duration-300 hover:scale-110">
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-3 rounded-full">
+              <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-3 rounded-full transition-all duration-300 hover:scale-110">
                 <Instagram className="w-5 h-5" />
               </Button>
             </div>
@@ -76,7 +76,7 @@ export const Footer = () => {
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-300 hover:text-white transition-colors text-left hover:translate-x-2 transform duration-300"
+                    className="text-gray-300 hover:text-white transition-all duration-300 text-left hover:translate-x-2 transform"
                   >
                     {link.name}
                   </button>
@@ -102,11 +102,11 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Stay Connected</h4>
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3 group">
-                <Phone className="w-4 h-4 text-blue-400 group-hover:animate-bounce" />
+                <Phone className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-gray-300">+91 6397474575</span>
               </div>
               <div className="flex items-center space-x-3 group">
-                <Mail className="w-4 h-4 text-blue-400 group-hover:animate-bounce" />
+                <Mail className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-gray-300">adv.kartik7@gmail.com</span>
               </div>
             </div>
@@ -121,7 +121,7 @@ export const Footer = () => {
                   placeholder="Your email"
                   className="bg-gray-800 border-gray-700 text-white"
                 />
-                <Button type="submit" size="sm" className="bg-blue-600 hover:bg-blue-700 animate-pulse">
+                <Button type="submit" size="sm" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300">
                   Subscribe
                 </Button>
               </form>

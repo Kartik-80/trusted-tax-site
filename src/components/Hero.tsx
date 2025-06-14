@@ -25,13 +25,13 @@ export const Hero = () => {
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-up">
               THE
               <br />
-              <span className="text-blue-200 animate-pulse">TRUSTED</span>
+              <span className="text-blue-200">TRUSTED</span>
               <br />
               TAX CONSULTANCY
               <br />
               DELIVERING
               <br />
-              <span className="text-blue-200 animate-pulse">FINEST</span>
+              <span className="text-blue-200">FINEST</span>
               <br />
               SOLUTIONS
             </h1>
@@ -46,14 +46,14 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-in" style={{animationDelay: '0.4s'}}>
               <Button 
                 size="lg" 
-                className="bg-blue-600 text-white border-2 border-blue-600 hover:bg-white hover:text-blue-600 transform transition-all duration-300 hover:scale-105 animate-pulse"
+                className="bg-blue-600 text-white border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-500 hover:shadow-lg"
                 onClick={() => scrollToSection('services')}
               >
                 Our Services
               </Button>
               <Button 
                 size="lg" 
-                className="bg-blue-600 text-white border-2 border-blue-600 hover:bg-white hover:text-blue-600 transform transition-all duration-300 hover:scale-105"
+                className="bg-blue-600 text-white border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-500 hover:shadow-lg"
                 onClick={() => scrollToSection('contact')}
               >
                 Get Consultation
