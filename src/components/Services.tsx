@@ -44,9 +44,9 @@ export const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-full opacity-5">
-        <div className="w-full h-full bg-gradient-to-l from-purple-400 to-blue-500"></div>
+        <div className="w-full h-full bg-gradient-to-l from-purple-400 to-blue-500 dark:from-gray-600 dark:to-gray-700"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -63,11 +63,11 @@ export const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-scale-in group bg-white dark:bg-gray-700 border-0 shadow-lg"
+              className="transition-all duration-200 hover:shadow-2xl hover:-translate-y-2 animate-scale-in group bg-white dark:bg-gray-800 border-0 shadow-lg dark:shadow-gray-900/50"
               style={{animationDelay: `${0.1 * index}s`}}
             >
               <CardHeader>
-                <div className="text-6xl mb-4 text-center transition-transform duration-300 group-hover:scale-110">
+                <div className="text-6xl mb-4 text-center transition-transform duration-200 group-hover:scale-110">
                   {service.icon}
                 </div>
                 <CardTitle className="text-xl text-center dark:text-white">{service.title}</CardTitle>
@@ -82,7 +82,7 @@ export const Services = () => {
         <div className="text-center animate-fade-in" style={{animationDelay: '0.6s'}}>
           <Button 
             size="lg" 
-            className="bg-blue-600 text-white border-2 border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-500 hover:shadow-lg"
+            className="bg-blue-600 text-white border-2 border-blue-600 hover:bg-white hover:text-blue-600 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200 hover:shadow-lg"
             onClick={scrollToContact}
           >
             Contact Us
@@ -92,3 +92,4 @@ export const Services = () => {
     </section>
   );
 };
+

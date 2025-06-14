@@ -33,7 +33,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white relative overflow-hidden">
+    <footer className="bg-gray-900 dark:bg-black text-white relative overflow-hidden">
       {/* Smooth Wave Animation */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg
@@ -45,7 +45,7 @@ export const Footer = () => {
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
             fill="rgb(249 250 251)"
-            className="dark:fill-gray-800 animate-smooth-wave"
+            className="dark:fill-gray-900 animate-smooth-wave"
           ></path>
         </svg>
       </div>
@@ -54,15 +54,15 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="animate-fade-in">
-            <h3 className="text-2xl font-bold mb-6">KARTIK TAX LAB & CO.</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white">KARTIK TAX LAB & CO.</h3>
             <div className="flex space-x-4 mb-6">
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-all duration-300 hover:scale-110">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-all duration-200 hover:scale-105">
                 <Facebook className="w-5 h-5" />
               </Button>
-              <Button size="sm" className="bg-blue-700 hover:bg-blue-800 p-3 rounded-full transition-all duration-300 hover:scale-110">
+              <Button size="sm" className="bg-blue-700 hover:bg-blue-800 p-3 rounded-full transition-all duration-200 hover:scale-105">
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-3 rounded-full transition-all duration-300 hover:scale-110">
+              <Button size="sm" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-3 rounded-full transition-all duration-200 hover:scale-105">
                 <Instagram className="w-5 h-5" />
               </Button>
             </div>
@@ -70,13 +70,13 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-300 hover:text-white transition-all duration-300 text-left hover:translate-x-2 transform"
+                    className="text-gray-300 dark:text-gray-400 hover:text-white transition-all duration-200 text-left hover:translate-x-2 transform"
                   >
                     {link.name}
                   </button>
@@ -87,11 +87,11 @@ export const Footer = () => {
 
           {/* Services */}
           <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-gray-300">{service}</span>
+                  <span className="text-gray-300 dark:text-gray-400">{service}</span>
                 </li>
               ))}
             </ul>
@@ -99,29 +99,29 @@ export const Footer = () => {
 
           {/* Contact & Newsletter */}
           <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <h4 className="text-lg font-semibold mb-6">Stay Connected</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white">Stay Connected</h4>
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3 group">
-                <Phone className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-gray-300">+91 6397474575</span>
+                <Phone className="w-4 h-4 text-blue-400 group-hover:scale-105 transition-transform duration-200" />
+                <span className="text-gray-300 dark:text-gray-400">+91 6397474575</span>
               </div>
               <div className="flex items-center space-x-3 group">
-                <Mail className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-gray-300">adv.kartik7@gmail.com</span>
+                <Mail className="w-4 h-4 text-blue-400 group-hover:scale-105 transition-transform duration-200" />
+                <span className="text-gray-300 dark:text-gray-400">adv.kartik7@gmail.com</span>
               </div>
             </div>
             
             <div>
-              <h5 className="font-semibold mb-3">Newsletter</h5>
-              <p className="text-gray-300 text-sm mb-4">
+              <h5 className="font-semibold mb-3 text-white">Newsletter</h5>
+              <p className="text-gray-300 dark:text-gray-400 text-sm mb-4">
                 Subscribe for tax tips and updates
               </p>
               <form onSubmit={handleSubscribe} className="flex space-x-2">
                 <Input
                   placeholder="Your email"
-                  className="bg-gray-800 border-gray-700 text-white"
+                  className="bg-gray-800 dark:bg-gray-800 border-gray-700 dark:border-gray-600 text-white"
                 />
-                <Button type="submit" size="sm" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300">
+                <Button type="submit" size="sm" className="bg-blue-600 hover:bg-blue-700 transition-all duration-200">
                   Subscribe
                 </Button>
               </form>
@@ -129,8 +129,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center animate-fade-in" style={{animationDelay: '0.4s'}}>
-          <p className="text-gray-300">
+        <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 text-center animate-fade-in" style={{animationDelay: '0.4s'}}>
+          <p className="text-gray-300 dark:text-gray-400">
             © 2024 Kartik Tax Lab & Co. All rights reserved.
           </p>
         </div>
@@ -138,3 +138,4 @@ export const Footer = () => {
     </footer>
   );
 };
+
