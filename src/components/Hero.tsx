@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -58,10 +59,6 @@ export const Hero = () => {
                 Get Consultation
               </Button>
             </div>
-
-            <div className="cursor-pointer animate-fade-in" style={{animationDelay: '0.6s'}} onClick={() => scrollToSection('services')}>
-              <ArrowDown className="w-6 h-6 mx-auto animate-bounce" />
-            </div>
           </div>
 
           <div className="lg:block animate-fade-in" style={{animationDelay: '0.3s'}}>
@@ -76,6 +73,11 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Centered Arrow */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-fade-in" style={{animationDelay: '0.6s'}} onClick={() => scrollToSection('services')}>
+        <ArrowDown className="w-6 h-6 animate-bounce" />
       </div>
     </section>
   );
